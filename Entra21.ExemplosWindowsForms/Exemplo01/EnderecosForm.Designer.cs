@@ -179,10 +179,15 @@
             this.buttonEditar.TabIndex = 9;
             this.buttonEditar.Text = "Editar";
             this.buttonEditar.UseVisualStyleBackColor = true;
+            this.buttonEditar.Click += new System.EventHandler(this.buttonEditar_Click);
             // 
             // comboBoxPaciente
             // 
             this.comboBoxPaciente.FormattingEnabled = true;
+            this.comboBoxPaciente.Items.AddRange(new object[] {
+            "Francisco",
+            "Maria",
+            "João"});
             this.comboBoxPaciente.Location = new System.Drawing.Point(914, 291);
             this.comboBoxPaciente.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.comboBoxPaciente.Name = "comboBoxPaciente";
@@ -198,6 +203,7 @@
             this.buttonSalvar.TabIndex = 11;
             this.buttonSalvar.Text = "Salvar";
             this.buttonSalvar.UseVisualStyleBackColor = true;
+            this.buttonSalvar.Click += new System.EventHandler(this.buttonSalvar_Click);
             // 
             // buttonCancelar
             // 

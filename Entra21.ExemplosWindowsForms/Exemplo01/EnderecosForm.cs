@@ -16,5 +16,12 @@ namespace Entra21.ExemplosWindowsForms.Exemplo01
         {
             InitializeComponent();
         }
+
+        private void buttonCancelar_Click(object sender, EventArgs e)
+        {
+            maskedTextBoxCep.Text = "";
+            textBoxEnderecoCompleto.Text = "";
+
+        }
     }
 }

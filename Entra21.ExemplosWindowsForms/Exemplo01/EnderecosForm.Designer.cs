@@ -81,7 +81,7 @@
             // ColumnCodigo
             // 
             this.ColumnCodigo.HeaderText = "Código";
-            this.ColumnCodigo.MinimumWidth = 8;
+            this.ColumnCodigo.MinimumWidth = 40;
             this.ColumnCodigo.Name = "ColumnCodigo";
             this.ColumnCodigo.ReadOnly = true;
             this.ColumnCodigo.Visible = false;
@@ -90,10 +90,10 @@
             // ColumnEnderecoCompleto
             // 
             this.ColumnEnderecoCompleto.HeaderText = "Endereço Completo";
-            this.ColumnEnderecoCompleto.MinimumWidth = 8;
+            this.ColumnEnderecoCompleto.MinimumWidth = 120;
             this.ColumnEnderecoCompleto.Name = "ColumnEnderecoCompleto";
             this.ColumnEnderecoCompleto.ReadOnly = true;
-            this.ColumnEnderecoCompleto.Width = 150;
+            this.ColumnEnderecoCompleto.Width = 400;
             // 
             // ColumnCep
             // 
@@ -126,9 +126,11 @@
             // 
             this.maskedTextBoxCep.Location = new System.Drawing.Point(914, 104);
             this.maskedTextBoxCep.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.maskedTextBoxCep.Mask = "99999-999";
             this.maskedTextBoxCep.Name = "maskedTextBoxCep";
             this.maskedTextBoxCep.Size = new System.Drawing.Size(141, 31);
             this.maskedTextBoxCep.TabIndex = 3;
+            this.maskedTextBoxCep.Leave += new System.EventHandler(this.maskedTextBoxCep_Leave);
             // 
             // labelEnderecoCompleto
             // 
@@ -169,6 +171,7 @@
             this.buttonApagar.TabIndex = 8;
             this.buttonApagar.Text = "Apagar";
             this.buttonApagar.UseVisualStyleBackColor = true;
+            this.buttonApagar.Click += new System.EventHandler(this.buttonApagar_Click);
             // 
             // buttonEditar
             // 
@@ -179,20 +182,17 @@
             this.buttonEditar.TabIndex = 9;
             this.buttonEditar.Text = "Editar";
             this.buttonEditar.UseVisualStyleBackColor = true;
-            this.buttonEditar.Click += new System.EventHandler(this.buttonEditar_Click);
             // 
             // comboBoxPaciente
             // 
+            this.comboBoxPaciente.DisplayMember = "Nome";
             this.comboBoxPaciente.FormattingEnabled = true;
-            this.comboBoxPaciente.Items.AddRange(new object[] {
-            "Francisco",
-            "Maria",
-            "João"});
             this.comboBoxPaciente.Location = new System.Drawing.Point(914, 291);
             this.comboBoxPaciente.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.comboBoxPaciente.Name = "comboBoxPaciente";
             this.comboBoxPaciente.Size = new System.Drawing.Size(513, 33);
             this.comboBoxPaciente.TabIndex = 10;
+            this.comboBoxPaciente.ValueMember = "Codigo";
             // 
             // buttonSalvar
             // 
